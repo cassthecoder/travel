@@ -1,7 +1,3 @@
-<a class="navbar-brand" href="/">Travel</a>
-<a href="about">About</a>
-
-
 <h1>Come Take a Trip with Me</h1>
 <p>Welcome to my travel site, where you will go on a journey with me and help me find all the dope spots.</p>
 
@@ -14,7 +10,7 @@
 </ul>
 
 <% @pictures.each do |picture| %>
-	<%= image_tag picture %>
+	<%= image_tag picture, class: "img-responsive" %>
 <% end %>
 
 
