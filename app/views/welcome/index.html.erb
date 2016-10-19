@@ -1,0 +1,20 @@
+<h1>Come Take a Trip with Me</h1>
+<p>Welcome to my travel site, where you will go on a journey with me and help me find all the dope spots.</p>
+
+<%= @homestate %>
+<%= @countries %>
+<ul>
+<% @countries.each do |country| %>
+	<li><%= country %></li>
+<% end %>
+</ul>
+
+<% @pictures.each do |picture| %>
+	<%= image_tag picture %>
+<% end %>
+
+
+<!-- (beesting=)image_tag "united_states.jpg", alt:"United States", id: "usa", class: "country" %>
+image_tag "puerto_rico.jpg", alt:"Puerto Rico", id: "pr", class: "country" %>
+image_tag "germany.jpg", alt:"Germany", id: "germany", class: "country" %>
+image_tag "thailand.jpg", alt:"Thailand", id: "thailand", class: "country" %> -->
