@@ -1,0 +1,332 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  background: url(<%= asset_path "travel_background.jpg" %>) no-repeat;
+  background-size: cover;
+}
+
+
+/*TEXTS*/
+
+h1 {
+  font-family: 'Lobster', cursive;
+  color: #DBD8D3;
+  text-align: center;
+  font-size: 10vh;
+  text-shadow: 3px 1px 1px rgba(0, 0, 0, 1);
+}
+
+h1 span {     
+   background: transparent;
+   position: absolute; 
+   top: 4em; 
+   left: 0; 
+   width: 100%; 
+}
+
+.about > h3{
+  color:#DAAC88;
+  text-shadow: 3px 1px 1px rgba(0, 0, 0, 1);
+}
+
+.welcome > h2{
+  font-family: 'Lobster', cursive;
+  color: #282A27;
+  text-align: center;
+}
+
+.contact > h2{
+  font-family: 'Lobster', cursive;
+  color: #DBD8D3;
+  text-shadow: 3px 1px 1px rgba(0, 0, 0, 1);
+  text-align: center;
+}
+
+.contact > h3 {
+  font-family: 'Lobster', cursive;
+  color: #DAAC88;
+  text-shadow: 3px 1px 1px rgba(0, 0, 0, 1);
+  text-align: center;
+}
+
+h3{
+  color:#282A27;
+  font-family: 'Lobster', cursive;
+  text-align: center;
+}
+
+h4{
+  font-family: 'Raleway', sans-serif;
+  color: #DBD8D3;
+}
+
+p{
+  font-family: 'Raleway', sans-serif;
+}
+
+li{
+  font-family: 'Raleway', sans-serif;
+}
+
+.nav .nav-pills li{
+  color: #DBD8D3;
+}
+
+/*IMAGES*/
+.container .show img{
+  width: 100%;
+  height: auto;
+}
+
+.welcome img{
+  animation: roll 3s infinite;
+  transform: rotate(30deg);
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*FORM*/
+.form-group{
+  font-family: 'Raleway', sans-serif;
+  color:#DBD8D3;
+}
+
+.form-control{
+  background-color: black;
+  font-family: 'Raleway', sans-serif;
+  color:#DAAC88;
+}
+
+textarea.form-control{
+  font-family: 'Raleway', sans-serif;
+  color:#DAAC88;
+}
+
+/*CONTAINERS AND SUCH*/
+
+.jumbotron{
+  background-color: rgba(0,0,0,.6);
+  width:100%;
+}
+
+.container {
+  background: transparent;
+}
+
+.container .front-page{
+  margin-top: 30vh;
+}
+
+.well{
+  background-color: #DBD8D3;
+  height: auto;
+}
+
+/*NAVBAR*/
+
+.navbar-default .navbar-brand {
+  font-family: 'Lobster', cursive;
+  color: #000;
+}
+
+.nav .nav-pills{
+  background-color: #715546;
+}
+
+/*THINGS TO DO W CLICKING*/
+ul a{
+  font-family: 'Raleway', sans-serif;
+  color:#DAAC88;
+  background-color: #403B38;
+}
+
+.navbar-default ul a {
+  background-color: transparent;
+}
+
+a .button-newnew{
+  font-family: 'Raleway', sans-serif;
+  color:#403B38;
+}
+
+.glyphicon{
+  color: #715546;
+  font-size: 1.5em;
+}
+
+a:hover{
+  color:#DAAC88; 
+  background-color:transparent; 
+  text-decoration:none;
+}
+
+a:active{
+  color:#DAAC88; 
+  background-color:transparent; 
+  text-decoration:none;
+}
+
+/*BUTTONS*/
+
+.btn {
+  border-color: black;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 5px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow:    0px 5px 0px rgba(0, 0, 0, 1);
+  box-shadow:         0px 5px 0px rgba(0, 0, 0, 1);
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+
+.button-newnew {
+  background-color: #DAAC88;
+  font-family: 'Raleway', sans-serif;
+  color:#403B38;
+}
+
+.button-newnew:hover {background-color: #E7B690;}
+
+.button-newnew:active {
+  background-color: #E7B690;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button-back {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background:url(<%= asset_path "travel_background.jpg" %>) no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: black;
+  border-radius: 15px;
+}
+
+.button-back:hover {background-color: rgba(0,0,0,.5);}
+
+.button-back:active {
+  background-color: rgba(0,0,0,.5);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button-blue {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: blue;
+  border: black;
+  border-radius: 15px;
+}
+
+.button-blue:hover {background-color: blue}
+
+.button-blue:active {
+  background-color: blue;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button-red {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: red;
+  border: black;
+  border-radius: 15px;
+}
+
+.button-red:hover {background-color: red}
+
+.button-red:active {
+  background-color: red;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button-yellow {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: yellow;
+  border: black;
+  border-radius: 15px;
+}
+
+.button-yellow:hover {background-color: yellow}
+
+.button-yellow:active {
+  background-color: yellow;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/*MAPS*/
+
+#map-canvas{
+  width: 100%;
+  height: 500px;
+}
+
+#map-canvas, #destination-map {
+  width: 100%;
+  height: 500px;
+}
+
+.map-control {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
+    font-family: 'Roboto','sans-serif';
+    margin: 10px;
+    /* Hide the control initially, to prevent it from appearing
+    before the map loads. */
+    display: none;
+}
+    /* Display the control once it is inside the map. */
+#map .map-control { display: block; }
+
+.selector-control {
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+}

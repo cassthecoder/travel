@@ -4,6 +4,7 @@ class WelcomeController < ApplicationController
 	  	@homestate = 'Arizona'
 	  	@countries = ['United States','Puerto Rico', 'Germany', 'Thailand']
 	  	@pictures = ['united_states.jpg', 'puerto_rico.jpg', 'germany.jpg', 'thailand.jpg']
+	  	@destinations = Destination.all
 	end
 
 	def about
@@ -13,5 +14,7 @@ class WelcomeController < ApplicationController
 
 	def contact
 	end
+
+
 
 end

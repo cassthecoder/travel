@@ -1,0 +1,32 @@
+<% if notice != nil %>
+  <p id="notice" class="alert alert-success" role="alert">
+    <%= notice %>
+  </p>
+<% end %>
+
+<div class = "container show text-center">
+	<img><%= image_tag "#{@destination.avatar}" %></img>
+		<h1><span><%= "#{@destination.city}, #{@destination.country}" %></span></h1>
+
+			<div class="well">
+				<p> <%= @destination.description %></p>
+				<br/>
+
+				<div id="destination-map"></div>
+				<br/>
+
+				<h3><%= @destination.address %></h3>				
+			</div>
+</div>
+
+
+  <%= link_to 'Edit', edit_destination_path(@destination), class: "btn btn-default" %> |
+  <%= link_to 'Back', destinations_path, class: "btn btn-default" %>
+
+
+<%= javascript_tag do %>
+   latitude = '<%= j @destination.latitude.to_s %>';
+   longitude = '<%= j @destination.longitude.to_s %>';
+   address = '<%= j @destination.address %>';
+   description = '<%= j @destination.description %>';
+<% end %>

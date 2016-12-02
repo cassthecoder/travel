@@ -6,15 +6,23 @@
 
 <h1>About</h1>
 
-<%= link_to "Blue", about_path(color: "blue"), class: "btn btn-primary" %>
-<%= link_to "Red", about_path(color: "red"), class: "btn btn-primary" %>
-<%= link_to "Yellow", about_path(color: "yellow"), class: "btn btn-primary" %>
+<br/>
+
+<div class = "jumbotron">
+	<div class= "container text-center">
+		<h4>Destination Unknown is a prototype application ran on Ruby on Rails that allows the user to log travel destinations. With each destination log, the user can upload a photo, enter an address, and take notes. The application utilizes the paperclip gem to upload photos and the google api to map out the address entered for each destination. Feel free to click around and see how it all works!</h4>
+	</div>
 
 
+<div class="about">
+	<h3> Want to see something cool and random? Click the buttons below. </h3>
+</div>
 
-<p>Blah blah im talking here</p>
-<p>My favorite color is <%= @color %> and my shoe size is <%= @size %></p>
+<div class = "container text-center">
+	<%= link_to "", about_path(color: "blue"), class: "btn button-blue" %>
+	<%= link_to "", about_path(color: "red"), class: "btn button-red" %>
+	<%= link_to "", about_path(color: "yellow"), class: "btn button-yellow" %>
+	<%= link_to "", about_path, class: "btn button-back" %>
+</div>
 
-<% if @size.to_i >= 12 %>
-	<p>Yeah, yeah, yeah I'm big footed.</p>
-<% end %>
+</div>
